@@ -1370,6 +1370,7 @@ footer {
             font-weight: 700;
             font-size: 32px;
             line-height: 1;
+            color: #bfd455;
           }
         }
         .right {
@@ -1378,13 +1379,14 @@ footer {
           h3 {
             color: #1e1e1e;
             font-size: 20px;
-            font-weight: 400;
+            font-weight: 700;
           }
           p {
             color: #636262;
             font-size: 20px;
             font-weight: 400;
             line-height: 1;
+            text-align: justify;
           }
           a {
           }
@@ -1422,14 +1424,14 @@ footer {
       }
       .process:nth-child(even)::after {
         border-left: 2px dashed black;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    border-radius: 25px 0 0 0;
-    bottom: -94px;
-    left: calc(0% - 350px);
-    transform: translate(0, 0%);
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        border-radius: 25px 0 0 0;
+        bottom: -94px;
+        left: calc(0% - 350px);
+        transform: translate(0, 0%);
       }
       .process:last-child::before {
         display: none;
@@ -1444,7 +1446,7 @@ footer {
 // RESPONSIVE
 @media (max-width: 560px) {
   header {
-        top: 15px;
+    top: 15px;
     .inner-div {
     }
     .left img {
@@ -1453,20 +1455,18 @@ footer {
     .right {
       .inner-wrapper {
         flex-direction: column;
-    position: relative;
+        position: relative;
         .menu {
           img {
-            
           }
         }
         .menu-options-wrapper {
           flex-direction: column;
-    height: auto;
-    position: absolute;
-    top: 66px;
-    right: 0;
+          height: auto;
+          position: absolute;
+          top: 66px;
+          right: 0;
           .menu-option a {
-            
             &:hover {
             }
           }
@@ -1476,40 +1476,36 @@ footer {
   }
 
   .hero-carousel {
-
-    .inner-div { 
+    .inner-div {
       .content-absolute {
         max-width: 100% !important;
-    width: 100%;
-    right: 0;
-    width: calc(100% - 20px);
-    margin: auto;
-    left: 50%;
-    transform: translate(-50%, 0px);
+        width: 100%;
+        right: 0;
+        width: calc(100% - 20px);
+        margin: auto;
+        left: 50%;
+        transform: translate(-50%, 0px);
       }
     }
     .services-hero-menu {
-      
       .services {
         gap: 10px;
-    padding: 10px 15px;
+        padding: 10px 15px;
         gap: 15px;
-    /* max-width: min-content; */
-    margin: auto;
+        /* max-width: min-content; */
+        margin: auto;
         .menu {
           max-width: min-content;
-          
-    line-height: 1;
+
+          line-height: 1;
           &:nth-child(2) {
-            
           }
         }
         .menu a {
-              font-size: 14px;
-              
-    line-height: 1;
+          font-size: 14px;
+
+          line-height: 1;
           &.active {
-            
           }
           &:hover {
           }
@@ -1529,14 +1525,14 @@ footer {
 
   .welcome-text {
     padding-top: 100px;
-        padding-bottom: 50px;
+    padding-bottom: 50px;
     h2 {
       font-size: 18px;
-    line-height: 1.2;
+      line-height: 1.2;
       span {
-            font-size: 22px;
-    line-height: 1.2;
-    font-weight: 600;
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: 600;
       }
     }
   }
@@ -1544,42 +1540,40 @@ footer {
   .meet-team-wrapper {
     .inner-div {
       padding-top: 50px;
-        padding-bottom: 50px;
-            flex-direction: column;
-    gap: 20px;
+      padding-bottom: 50px;
+      flex-direction: column;
+      gap: 20px;
       .left {
-            width: 100%;
-    gap: 20px;
-    border-right: none;
-    border-bottom: 2px solid #bfd455;
-    padding-right: 0;
-    padding-bottom: 20px;
+        width: 100%;
+        gap: 20px;
+        border-right: none;
+        border-bottom: 2px solid #bfd455;
+        padding-right: 0;
+        padding-bottom: 20px;
         .top {
           .first {
             font-size: 24px;
           }
           .second {
-            
           }
         }
         .bottom {
-          
           p {
             font-size: 14px;
           }
         }
         .know-more-btn {
-              max-width: 160px;
-    padding: 12px 20px;
+          max-width: 160px;
+          padding: 12px 20px;
           a {
-                font-size: 14px;
+            font-size: 14px;
           }
         }
       }
       .right {
-            width: 100%;
+        width: 100%;
         img {
-              width: 100%;
+          width: 100%;
         }
       }
     }
@@ -1588,48 +1582,43 @@ footer {
   .visit-us-wrapper {
     .inner-div {
       padding-top: 50px;
-        padding-bottom: 50px;
+      padding-bottom: 50px;
     }
     .top {
-          gap: 15px;
+      gap: 15px;
       .left {
-            min-width: fit-content;
+        min-width: fit-content;
         h3 {
-          
         }
       }
       .right {
-        
         .right-top {
           p {
             font-size: 14px;
-    line-height: 1.2;
-    margin-bottom: 20px;
+            line-height: 1.2;
+            margin-bottom: 20px;
           }
         }
         .right-bottom {
-              gap: 20px;
-    display: flex
-;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: column;
+          gap: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          flex-direction: column;
           .bottom-left {
-            
             .visit-address {
               gap: 5px;
-    margin-top: 20px;
+              margin-top: 20px;
               p {
-                    font-size: 14px;
+                font-size: 14px;
               }
               a {
-                    font-size: 14px;
+                font-size: 14px;
               }
             }
           }
-          .bottom-right img{
-            
-    display: none;
+          .bottom-right img {
+            display: none;
           }
         }
       }
@@ -1642,51 +1631,45 @@ footer {
     }
     .top {
       flex-direction: column-reverse;
-    gap: 20px;
-    padding-top: 20px;
+      gap: 20px;
+      padding-top: 20px;
       .left {
-        display: flex
-;
-    flex-direction: column-reverse;
-    align-items: center;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
         .address {
-          
           p {
             display: none;
           }
         }
         .policy-options {
-          
         }
-        img{
+        img {
           display: none;
         }
       }
       .middle {
         align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 0;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0;
         .newletter {
-          
         }
         .newletter,
         .address-contact {
           p {
-                font-size: 16px;
-                text-align: center;
+            font-size: 16px;
+            text-align: center;
           }
         }
 
         .badges {
           p {
-                display: none;
+            display: none;
           }
           .img img {
-            
           }
           .img {
-            
           }
         }
         a {
@@ -1695,27 +1678,23 @@ footer {
         }
       }
       .right {
-        
         .social-media {
-          
           a img {
-            
           }
         }
       }
     }
     .bottom {
       flex-direction: column;
-    gap: 2px;
-    align-items: center;
-    padding: 10px 0;
-    margin: 10px 0 0;
+      gap: 2px;
+      align-items: center;
+      padding: 10px 0;
+      margin: 10px 0 0;
       p {
-        
       }
       a {
         border: none;
-    padding: 0;
+        padding: 0;
         span {
         }
         &:hover {
@@ -1727,20 +1706,19 @@ footer {
   // TEAM HERO SECTION
   .team-hero {
     .inner-div {
-          padding-bottom: 0px;
-    flex-direction: column !important;
+      padding-bottom: 0px;
+      flex-direction: column !important;
       .left {
         width: 100%;
       }
       .left img {
-        
       }
       .right {
         width: 100%;
         .content {
           h2 {
             font-size: 20px;
-    line-height: 1.2;
+            line-height: 1.2;
           }
           p {
             font-size: 14px;
@@ -1754,27 +1732,26 @@ footer {
   .our-people {
     .inner-div {
       padding-top: 50px;
-        padding-bottom: 50px;
-        gap: 20px;
-        align-items: flex-start;
-        border: none;
+      padding-bottom: 50px;
+      gap: 20px;
+      align-items: flex-start;
+      border: none;
       .left {
         font-size: 16px;
-    max-width: fit-content;
-    width: 30%;
-    border-top: 1px solid #bfd455;
-    padding-top: 10px;
+        max-width: fit-content;
+        width: 30%;
+        border-top: 1px solid #bfd455;
+        padding-top: 10px;
       }
       .right {
         border-top: 1px solid #bfd455;
-    padding-top: 10px;
-            gap: 10px;
-    width: 70%;
+        padding-top: 10px;
+        gap: 10px;
+        width: 70%;
         p {
-              font-size: 14px;
-    line-height: 1.2;
+          font-size: 14px;
+          line-height: 1.2;
           span {
-            
           }
         }
       }
@@ -1789,14 +1766,13 @@ footer {
       padding-bottom: 50px;
     }
     .individual-section:first-child {
-      
     }
     .individual-section {
-          padding: 50px 10px;
+      padding: 50px 10px;
 
       > p {
-            font-size: 24px;
-    margin-bottom: 50px;
+        font-size: 24px;
+        margin-bottom: 50px;
       }
       .team-wrapper {
         flex-wrap: wrap;
@@ -1806,23 +1782,20 @@ footer {
         &:hover {
         }
         &:nth-child(even) .img-outer {
-          
         }
         &:nth-child(odd) .img-outer {
-          
         }
         .img-outer {
           width: 150px;
-    height: 150px;
+          height: 150px;
         }
         img {
-          
         }
         h3 {
           font-size: 20px;
         }
         p {
-         font-size: 14px; 
+          font-size: 14px;
         }
       }
     }
@@ -1830,22 +1803,20 @@ footer {
 
   // ABOUT HERO
   .about-hero-wrapper {
-    
     .inner-div {
     }
     .content {
-      
       h2 {
         font-size: 32px;
       }
       p {
         font-size: 18px;
-    line-height: 1.2;
-    margin: 5px 0;
+        line-height: 1.2;
+        margin: 5px 0;
       }
       a {
         font-size: 14px;
-    margin-top: 5px;
+        margin-top: 5px;
         &:hover {
         }
       }
@@ -1856,8 +1827,8 @@ footer {
   .studio-ethos {
     .inner-div {
       padding-top: 50px;
-        padding-bottom: 50px;
-            flex-direction: column;
+      padding-bottom: 50px;
+      flex-direction: column;
     }
     h2 {
       font-size: 18px;
@@ -1867,9 +1838,9 @@ footer {
     p {
       font-size: 14px;
       width: 100%;
-          border-left: none;
-              border-top: 2px solid #bfd455;
-          padding: 15px 0 15px 0px;
+      border-left: none;
+      border-top: 2px solid #bfd455;
+      padding: 15px 0 15px 0px;
       br {
         display: block;
       }
@@ -1880,11 +1851,11 @@ footer {
   .founders-note {
     .inner-div {
       padding-top: 50px;
-        padding-bottom: 50px;
+      padding-bottom: 50px;
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
-flex-direction: column;
+      flex-direction: column;
       .left {
         border-right: none;
         border-top: 2px solid #bfd455;
@@ -1908,7 +1879,7 @@ flex-direction: column;
         }
         p {
           font-size: 14px;
-              margin-bottom: 0px;
+          margin-bottom: 0px;
         }
       }
     }
@@ -1918,30 +1889,30 @@ flex-direction: column;
   .visit-our-showroom {
     .inner-div {
       padding-top: 50px;
-        padding-bottom: 50px;
+      padding-bottom: 50px;
       > img {
         width: 100%;
       }
       .floating-section {
-      min-width: 300px;
-        
+        min-width: 300px;
+
         .inner-floating {
           padding: 10px;
           img {
           }
           .content {
-                padding: 10px;
-    gap: 10px;
+            padding: 10px;
+            gap: 10px;
             h3 {
               font-size: 16px;
             }
             p {
               font-size: 12px;
-    line-height: 1.1;
+              line-height: 1.1;
             }
             a {
-                  font-size: 12px;
-    padding: 5px 10px;
+              font-size: 12px;
+              padding: 5px 10px;
               &:hover {
               }
             }
@@ -2043,45 +2014,38 @@ flex-direction: column;
           }
         }
         .process:nth-child(odd)::after {
-          border-left: 2px dashed black;
-          border-bottom: 2px dashed black;
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 100px;
-          border-radius: 0 0 0 25px;
-          bottom: -120px;
-          left: 15px;
+                  border-left: 2px dashed black;
+        border-bottom: 2px dashed black;
+        content: "";
+        position: absolute;
+        width: calc(100% - 225px);
+        height: 60px;
+        border-radius: 0 0 0 25px;
+        bottom: -63px;
+        left: 0px;
         }
         .process:nth-child(even)::before {
-          border-right: 2px dashed black;
-          border-bottom: 2px dashed black;
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 100px;
-          border-radius: 0 0 25px 0;
-          top: 50%;
-          right: 325px;
-          transform: translate(0, -30%);
+                  border-right: 2px dashed black;
+        border-bottom: 2px dashed black;
+        content: "";
+        position: absolute;
+        width: calc(100% - 235px);
+        height: 100px;
+        border-radius: 0 0 25px 0;
+        top: 50%;
+        right: 200px;
+        transform: translate(0, -40%);
         }
         .process:nth-child(even)::after {
           border-left: 2px dashed black;
-          // border-bottom: 2px dashed black;
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 100px;
-          border-radius: 0 0 25px 0;
-          top: 50%;
-          right: 325px;
-          transform: translate(0, -30%);
-        }
-        .process:last-child::before {
-          display: none;
-        }
-        .process:last-child::after {
-          display: none;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        border-radius: 25px 0 0 0;
+        bottom: -40px;
+        left: calc(0% + 10px);
+        transform: translate(0, 0%);
         }
       }
     }
