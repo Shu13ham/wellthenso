@@ -678,9 +678,10 @@ header {
   }
   .hero-content {
     .hero-title {
-      font-size: 32px;
+      font-size: 36px;
       color: #fff;
       margin-bottom: 5px;
+      font-weight: 400;
     }
     .hero-para {
       color: #fff;
@@ -733,7 +734,7 @@ header {
       .top {
         .first {
           color: #383838;
-          font-size: 20px;
+          font-size: 24px;
           font-weight: 400;
           text-transform: capitalize;
         }
@@ -798,7 +799,7 @@ header {
       padding-top: 20px;
       h3 {
         color: #383838;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: 400;
       }
     }
@@ -878,7 +879,7 @@ footer {
     justify-content: space-between;
     .left {
       .address {
-        max-width: 201px;
+        max-width: 301px;
         display: flex;
         flex-direction: column;
         gap: 5px;
@@ -1035,7 +1036,7 @@ footer {
       gap: 30px;
       p {
         color: #1e1e1e;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 400;
         text-transform: capitalize;
         span {
@@ -1068,9 +1069,10 @@ footer {
     border-top: 1px solid #bfd455;
 
     > p {
-      font-size: 32px;
+      font-size: 36px;
       margin-bottom: 100px;
       // text-align: center;
+      color: grey;
     }
     .team-wrapper {
       display: flex;
@@ -1078,8 +1080,12 @@ footer {
       align-items: center;
       gap: 20px;
       flex-wrap: nowrap;
+          display: grid
+;
+    grid-template-columns: 40% 20% 20% 20%;
     }
     .team-section {
+          height: 300px;
       &:hover {
       }
       &:nth-child(even) .img-outer {
@@ -1092,26 +1098,40 @@ footer {
         position: relative;
         width: 300px;
         height: 300px;
+        background: transparent;
+        background-color: transparent !important;
       }
       img {
         position: absolute;
         bottom: 0;
         left: 50%;
-        width: 90%;
+        width: 45%;
         transform: translate(-50%, 0);
       }
+      .img-outer:first-child{
+          width: 100%;
+          
+      }
+      &:first-child h3{
+            font-size: 32px;
+          }
+          &:first-child p{
+font-size: 20px;
+          }
       h3 {
         color: #bfd455;
-        font-size: 32px;
+        font-size: 24px;
         font-weight: 400;
         text-transform: capitalize;
         margin: 0;
+        text-align: center;
       }
       p {
         color: #444444;
-        font-size: 20px;
+        font-size: 14px;
         font-weight: 400;
         text-transform: capitalize;
+            text-align: center;
       }
     }
   }
@@ -1131,7 +1151,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 90%;
+    width: 60%;
     margin: 0 auto;
     position: absolute;
     top: 50%;
@@ -1140,14 +1160,14 @@ footer {
     h2 {
       color: #ebebdf;
       text-align: center;
-      font-size: 128px;
+      font-size: 100px;
       font-weight: 400;
       text-transform: capitalize;
     }
     p {
       color: #fff;
       text-align: center;
-      font-size: 48px;
+      font-size: 40px;
       font-weight: 300;
     }
     a {
@@ -1180,7 +1200,7 @@ footer {
   }
   p {
     color: #1e1e1e;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
     width: 60%;
     border-left: 2px solid #bfd455;
@@ -1226,15 +1246,15 @@ footer {
       align-items: flex-start;
       padding-left: 20px;
       h3 {
-        color: #1e1e1e;
-        font-size: 32px;
+        color: grey;
+        font-size: 36px;
         font-weight: 400;
         text-transform: capitalize;
       }
       p {
         margin-bottom: 75px;
         color: #1e1e1e;
-        font-size: 28px;
+        font-size: 20px;
         font-weight: 400;
       }
     }
@@ -1315,7 +1335,7 @@ footer {
             border-top: 1px solid #bfd455;
             h2 {
               color: #1e1e1e;
-              font-size: 20px;
+              font-size: 24px;
               font-weight: 400;
             }
           }
@@ -1350,8 +1370,9 @@ footer {
     padding-bottom: 100px;
     h2 {
       text-align: center;
-      font-size: 32px;
+      font-size: 36px;
       margin-bottom: 50px;
+      font-weight: 500;
     }
     .process-content {
       display: flex;
@@ -1370,7 +1391,7 @@ footer {
         justify-content: flex-start;
         .left {
           p {
-            font-weight: 700;
+            font-weight: 400;
             font-size: 32px;
             line-height: 1;
             color: #bfd455;
@@ -1378,16 +1399,17 @@ footer {
         }
         .right {
           max-width: 300px;
-          padding-top: 6px;
+          padding-top: 3px;
           h3 {
             color: #1e1e1e;
-            font-size: 20px;
-            font-weight: 700;
+            font-size: 24px;
+            font-weight: 400;
+            text-transform: uppercase;
           }
           p {
-            color: #636262;
+            color: grey;
             font-size: 20px;
-            font-weight: 400;
+            font-weight: 300;
             line-height: 1;
             text-align: justify;
           }
@@ -1403,8 +1425,8 @@ footer {
         }
       }
       .process:nth-child(odd)::after {
-        border-left: 2px dashed black;
-        border-bottom: 2px dashed black;
+        border-left: 2px dashed #bfd455;
+        border-bottom: 2px dashed #bfd455;
         content: "";
         position: absolute;
         width: 100%;
@@ -1414,8 +1436,8 @@ footer {
         left: 15px;
       }
       .process:nth-child(even)::before {
-        border-right: 2px dashed black;
-        border-bottom: 2px dashed black;
+        border-right: 2px dashed #bfd455;
+        border-bottom: 2px dashed #bfd455;
         content: "";
         position: absolute;
         width: 100%;
@@ -1426,7 +1448,7 @@ footer {
         transform: translate(0, -30%);
       }
       .process:nth-child(even)::after {
-        border-left: 2px dashed black;
+        border-left: 2px dashed #bfd455;
         content: "";
         position: absolute;
         width: 100%;
@@ -1512,12 +1534,13 @@ footer {
       align-items: center;
       width: 100%;
       .project-title {
-        font-size: 48px;
+        font-size: 36px;
         font-weight: 400;
         line-height: 1;
       }
       .extra-detail {
-        font-size: 25px;
+        font-size: 20px;
+        color: grey;
         p {
         }
       }
@@ -1543,11 +1566,11 @@ footer {
           padding: 15px 0;
           border-top: 1px solid grey;
           .leftrow {
-            font-size: 24px;
+            font-size: 14px;
             color: grey;
           }
           .rightrow {
-            font-size: 24px;
+            font-size: 14px;
             color: #333;
             text-transform: uppercase;
             font-weight: 600;
@@ -1582,6 +1605,7 @@ footer {
       background: lightgray;
       h4 {
         font-size: 32px;
+        font-weight: 400;
       }
       a {
         font-size: 18px;
@@ -1598,10 +1622,10 @@ footer {
     padding-top: 100px;
     padding-bottom: 100px;
     h3 {
-      font-size: 32px;
+      font-size: 36px;
       text-align: center;
-      padding: 30px 0;
-      font-weight: 700;
+      padding: 30px 0 60px;
+      font-weight: 400;
     }
     .projects-wrapper {
       display: flex;
@@ -1623,8 +1647,8 @@ footer {
           list-style: none;
           text-align: left;
           padding: 8px 0;
-          border-bottom: 1px solid grey;
-          font-weight: 600;
+          border-bottom: 1px solid #dae5a0;
+          font-weight: 500;
         }
       }
     }
@@ -1645,7 +1669,7 @@ footer {
       min-width: 300px;
       h2 {
         color: #383838;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: 400;
       }
     }
@@ -1670,6 +1694,7 @@ footer {
         color: white;
         padding: 20px;
         font-size: 32px;
+        font-weight: 400;
       }
     }
 
@@ -1720,18 +1745,18 @@ footer {
       height: 100%;
     display: flex
 ;
-border-top: 2px solid #BFD455;
+border-top: 1px solid #BFD455;
     padding-top: 10px;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
       .top {
         h2 {
-          font-size: 32px;
+          font-size: 28px;
     font-weight: 500;
         }
         p {
-              font-size: 16px;
+              font-size: 15px;
     font-weight: 500;
     margin-bottom: 20px;
         }
@@ -1750,6 +1775,7 @@ border-top: 2px solid #BFD455;
     width: 100%;
     padding: 10px 0;
     border-bottom: 1px solid #333;
+        color: grey;
           p {
           }
         }
