@@ -5,51 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Well Then So</title>
-    <link rel="stylesheet" href="./styles.scss">
+    <link rel="stylesheet" href="./styles.css">
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="style.js"></script>
 </head>
 
 <body>
     <main>
         <div class="about-page">
             <div class="about-hero-wrapper">
-                <div class="inner-div">
-                    <div class="content">
-                        <h2>We Design With Care</h2>
-                        <p>Interior, Furniture and architectural design rooted in function, soul, and intention.</p>
-                        <a href="">View Our Work</a>
+            <div class="inner-div container">
+                <div class="content">
+                    <h1>
+                        <span id="title">
+                            <span class="title-letter">I</span>
+                            <span class="title-letter">N</span>
+                            <span class="title-letter">T</span>
+                            <span class="title-letter">E</span>
+                            <span class="title-letter">R</span>
+                            <span class="title-letter">I</span>
+                            <span class="title-letter">O</span>
+                            <span class="title-letter">R</span>
+                            <span class="title-letter">&nbsp;</span>
+                            <span class="title-letter">D</span>
+                            <span class="title-letter">E</span>
+                            <span class="title-letter">S</span>
+                            <span class="title-letter">I</span>
+                            <span class="title-letter">G</span>
+                            <span class="title-letter">N</span>
+                        </span>
+                        <br/>
+                    </h1>
+                    <div class="animation-section style-5">
+                        <div class="reveal-wrapper">
+                        <h1>
+                            <span class="line"><span class="line-inner">Interior, Furniture and architectural design rooted in function,</span></span>
+                            <span class="line"><span class="line-inner">soul, and intention.</span></span>
+                        </h1>
+                        </div>
                     </div>
+                    <a href="" class="style-4" id="sub-title">
+                        <span>View Our Work</span>
+                        <svg viewBox="0 0 13 20"><polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" /></svg>
+                    </a>
                 </div>
             </div>
+        </div>
             <div class="studio-ethos">
-                <div class="inner-div">
+                <div class="inner-div container">
                     <h2>The Studio Ethos</h2>
-                    <p>Since its inception in 2019, WellThenSo has worked across residential, commercial, and hospitality projects crafting spaces that bring function and feeling together.<br>With a strong foundation in interior and furniture design, our studio blends material exploration, spatial clarity, and detail-driven execution.
-                    <br>Every project, no matter how small or large, is approached with restraint, empathy, and rhythm. The kind of rhythm that lets the space breathe.</p>
+                    <p>Since its inception in 2019, WellThenSo has worked across residential, commercial, and
+                        hospitality projects crafting spaces that bring function and feeling together.<br><br>With a
+                        strong foundation in interior and furniture design, our studio blends material exploration,
+                        spatial clarity, and detail-driven execution.
+                        <br><br>Every project, no matter how small or large, is approached with restraint, empathy, and
+                        rhythm. The kind of rhythm that lets the space breathe.
+                    </p>
                 </div>
             </div>
             <div class="founders-note">
-                <div class="inner-div">
+                <div class="inner-div container">
                     <div class="left">
-                        <img src="" alt="">
+                        <img src="./img/jannat.webp" alt="Well Then Studio Interior Designing Porvorim Goa">
                         <h3>Jannat Chopra</h3>
                         <p>The Founder</p>
                     </div>
                     <div class="right">
                         <h3>WellThenSo</h3>
-                        <p>WellThenSo is proud to offer high quality design, construction, and project management services. We make every effort to ensure our work meets our clients’ needs and 95% of our business is either repeat or word-of-mouth.</p>
+                        <p>WellThenSo is proud to offer high quality design, construction, and project management
+                            services. We make every effort to ensure our work meets our clients’ needs and 95% of our
+                            business is either repeat or word-of-mouth.</p>
                     </div>
                 </div>
             </div>
             <div class="visit-our-showroom">
-                <div class="inner-div">
-                    <img src="" alt="">
+                <div class="inner-div container">
+                    <img src="./img/showroom-back.webp" alt="Well Then Studio Interior Designing Porvorim Goa">
                     <div class="floating-section">
                         <div class="inner-floating">
-                            <img src="" alt="">
+                            <img src="./img/showroom-front.webp" alt="Well Then Studio Interior Designing Porvorim Goa">
                             <div class="content">
                                 <h3>Visit Our Showroom</h3>
-                                <p>WellThenSo is proud to offer high quality design, construction, and project management services. We make every effort to ensure our work meets our clients’ needs and 95% of our business is either repeat or word-of-mouth.</p>
-                                <a href="">Contact Us</a>
+                                <p>WellThenSo is proud to offer high quality design, construction, and project
+                                    management services. We make every effort to ensure our work meets our clients’
+                                    needs and 95% of our business is either repeat or word-of-mouth.</p>
+                                <a href="">
+                                    <button class="custom-btn contact-us">Contact Us</button>
+                                </a>
                             </div>
                         </div>
                     </div>
