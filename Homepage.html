@@ -1,293 +1,664 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Well Then So</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="style.js"></script>
-</head>
+    <link rel="stylesheet" href="./styles.css" />
 
-<body>
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="style.js"></script>
+  </head>
+
+  <body>
     <header>
-        <div class="inner-div container">
-            <div class="left">
-                <img src="./img/site-logo.png" alt="Well Then Studio Interior Designing Porvorim Goa" width="200"
-                    height="">
-            </div>
-            <div class="right">
-                <div class="inner-wrapper">
-                    <div class="menu">
-                        <img src="./img/hamburger.png" width="50" height="50"
-                            alt="Well Then Studio Interior Designing Porvorim Goa" width="55" height="55">
-                    </div>
-                    <div class="menu-options-wrapper">
-                        <div class="menu-option">
-                            <a href="#">ABOUT US</a>
-                        </div>
-                        <div class="menu-option">
-                            <a href="#">SERVICES</a>
-                        </div>
-                        <div class="menu-option">
-                            <a href="#">PROJECTS</a>
-                        </div>
-                        <div class="menu-option">
-                            <a href="#">TEAM</a>
-                        </div>
-                        <div class="menu-option">
-                            <a href="#">JOURNAL</a>
-                        </div>
-                        <div class="menu-option">
-                            <a href="#">CONTACT</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="inner-div container">
+        <div class="left" data-animate-in="left" data-animate-in-delay="0">
+          <img
+            src="./img/site-logo.png"
+            alt="Well Then Studio Interior Designing Porvorim Goa"
+            width="200"
+            height=""
+          />
         </div>
+        <div
+          class="right hamburger-shift"
+          data-animate-in="right"
+          data-animate-in-delay="0"
+        >
+          <div class="inner-wrapper">
+            <div class="menu">
+              <div class="hamburger">
+                <div class="hamburger__container">
+                  <div class="hamburger__inner"></div>
+                  <div class="hamburger__hidden"></div>
+                </div>
+              </div>
+              <script>
+                // document.querySelector('.hamburger').addEventListener('click', (e) => {
+                //         e.currentTarget.classList.toggle('is-active');
+                //     })
+              </script>
+            </div>
+            <div class="menu-options-wrapper">
+              <div class="menu-option">
+                <div class="linkWrap">
+                  <a class="style-29 btn-shine style-31" href="">ABOUT US</a>
+                </div>
+              </div>
+              <div class="menu-option">
+                <div class="linkWrap">
+                  <a class="style-29 btn-shine style-31" href="">SERVICES</a>
+                </div>
+              </div>
+              <div class="menu-option">
+                <div class="linkWrap">
+                  <a class="style-29 btn-shine style-31" href="">PROJECTS</a>
+                </div>
+              </div>
+              <div class="menu-option">
+                <div class="linkWrap">
+                  <a class="style-29 btn-shine style-31" href="">TEAM</a>
+                </div>
+              </div>
+              <div class="menu-option">
+                <div class="linkWrap">
+                  <a class="style-29 btn-shine style-31" href="">JOURNAL</a>
+                </div>
+              </div>
+              <div class="menu-option">
+                <div class="linkWrap">
+                  <a class="style-29 btn-shine style-31" href="">CONTACT</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          const menu = document.querySelector(".hamburger");
+          const hamShift = document.querySelector(".hamburger-shift");
+          const wrapper = document.querySelector(".menu-options-wrapper");
+          const options = wrapper.querySelectorAll(".menu-option");
+          const options_link = document.querySelector(
+            ".menu-options-wrapper a"
+          );
+
+          let timeout;
+
+          const showMenu = () => {
+            wrapper.classList.add("active");
+            hamShift.classList.add("active");
+            menu.classList.add("active");
+            options_link.classList.add("active");
+            options.forEach((el, i) => {
+              el.style.setProperty("--delay", `${i * 0.1 + 0.9}s`);
+              el.classList.add("animated");
+            });
+            clearTimeout(timeout);
+          };
+
+          const hideMenu = () => {
+            timeout = setTimeout(() => {
+              wrapper.classList.remove("active");
+              hamShift.classList.remove("active");
+              menu.classList.remove("active");
+              options_link.classList.remove("active");
+              options.forEach((el) => {
+                el.classList.remove("animated");
+                // el.style.opacity = 0;
+              });
+            }, 200);
+          };
+
+          menu.addEventListener("mouseenter", showMenu);
+          wrapper.addEventListener("mouseenter", showMenu);
+
+          menu.addEventListener("mouseleave", hideMenu);
+          wrapper.addEventListener("mouseleave", hideMenu);
+
+          menu.addEventListener("click", function () {
+            if (menu.classList.contains("active")) {
+              hideMenu();
+            } else {
+              showMenu();
+            }
+          });
+        </script>
+      </div>
     </header>
     <main>
-        <div class="hero-carousel">
-            <div class="inner-div container">
-                <div class="content-absolute">
-                    <div class="services-hero-menu">
-                        <div class="services">
-                            <div class="menu">
-                                <a href="">Interior Design</a>
-                            </div>
-                            <div class="menu">
-                                <a href="" class="active">Furniture Design</a>
-                            </div>
-                            <div class="menu">
-                                <a href="">Architectural Design</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero-content">
-                        <h2 class="hero-title">HERO TITLE</h2>
-                        <p class="hero-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor
-                            incididunt ut labore et dolore magna aliqua</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="welcome-text">
-            <div class="inner-div container">
-                <h2>We Design custom, architect-grade spaces <span>and built them in weeks, not years.</span></h2>
-            </div>
-        </div>
-        <div class="featured-project-wrapper">
-            <div class="inner-div container">
-                <div class="leftmost">
-                    <h2>Featured</h2>
-                </div>
-                <div class="rightmost">
-                    <div class="left">
-                        <img src="./img/feat-prod-one-slide.webp" alt="Well Then So Interior Design Goa Porvorim">
-                        <h3 class="project-title">Te Fitti Cafe</h3>
-                    </div>
-                    <div class="right">
-                        <div class="top">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        </div>
-                        <div class="bottom">
-                            <img src="./img/feat-prod-two.jpg" alt="Well Then So Interior Design Goa Porvorim">
-                            <div>
-                                <h3 class="project-overview">Project Overview</h3>
-                                <p>Interior Design</p>
-                                <p>Interior Design</p>
-                                <p>Interior Design</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="inner-div container">
-                <div class="leftmost">
-                    <h2>Featured</h2>
-                </div>
-                <div class="rightmost">
-                    <div class="left">
-                        <img src="./img/feat-prod-one-slide.webp" alt="Well Then So Interior Design Goa Porvorim">
-                        <h3 class="project-title">Te Fitti Cafe</h3>
-                    </div>
-                    <div class="right">
-                        <div class="top">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        </div>
-                        <div class="bottom">
-                            <img src="./img/feat-prod-two.jpg" alt="Well Then So Interior Design Goa Porvorim">
-                            <div>
-                                <h3 class="project-overview">Project Overview</h3>
-                                <p>Interior Design</p>
-                                <p>Interior Design</p>
-                                <p>Interior Design</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="inner-div container">
-                <div class="leftmost">
-                    <h2>Featured</h2>
-                </div>
-                <div class="rightmost">
-                    <div class="left">
-                        <img src="./img/feat-prod-one-slide.webp" alt="Well Then So Interior Design Goa Porvorim">
-                        <h3 class="project-title">Te Fitti Cafe</h3>
-                    </div>
-                    <div class="right">
-                        <div class="top">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        </div>
-                        <div class="bottom">
-                            <img src="./img/feat-prod-two.jpg" alt="Well Then So Interior Design Goa Porvorim">
-                            <div>
-                                <h3 class="project-overview">Project Overview</h3>
-                                <p>Interior Design</p>
-                                <p>Interior Design</p>
-                                <p>Interior Design</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="meet-team-wrapper">
-            <div class="inner-div container">
-                <div class="left">
-                    <div class="top">
-                        <p class="first">Meet The Team</p>
-                        <p class="second">Energy and Experience of 30+ Professionals</p>
-                    </div>
-                    <div class="bottom">
-                        <p>
-                            WellThenSo (Interior Design) and HÀZO (Furniture Design) are Goa based design studios that
-                            believes in transforming any space into an aesthetically functional experience zone.
-                            An Initiative by Jannat Chopra
-                        </p>
-                        <p>
-                            providing InteriorDesign, FurnitureDesign , Architectural design and execution services for
-                            residential, commercial and hospitality ventures. Our teams' approach always remains in the
-                            best interest of the user, our vision is to make impactful designs in a responsible budget.
-                        </p>
-                    </div>
-                    <div class="know-more-btn">
-                        <a href="">KNOW MORE</a>
-                    </div>
-                </div>
-                <div class="right">
-                    <img src="./img/teams.webp" width="525" alt="Well Then Studio Interior Designing Porvorim Goa"
-                        width="524" height="386">
-                </div>
-            </div>
-        </div>
-        <div class="visit-us-wrapper">
-            <div class="inner-div container">
-                <div class="top">
-                    <div class="left">
-                        <h3>Visit Us</h3>
-                    </div>
-                    <div class="right">
-                        <div class="right-top">
-                            <p>
-                                Since our founding in 2019, our catalog has grown to with providing InteriorDesign,
-                                FurnitureDesign , Architectural design  and execution services for residential,
-                                commercial and hospitality ventures.
-                            </p>
-                        </div>
-                        <div class="right-bottom">
-                            <div class="bottom-left">
-                                <img src="./img/visit-left.webp" alt="Well Then Studio Interior Designing Porvorim Goa"
-                                    height="540">
-                                <div class="visit-address">
-                                    <p>Well Then So Interior & Furniture Design Studio</p>
-                                    <p>Sujata Enclave, Behind Galaxy Residency, Porvorim, Penha de Franca, Goa, 403501
-                                    </p>
-                                    <a href="">Get Direction</a>
-                                </div>
-                            </div>
-                            <div class="bottom-right">
-                                <img src="./img/visit-right.webp" alt="Well Then Studio Interior Designing Porvorim Goa"
-                                    height="840">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer>
+      <div class="hero-carousel">
+        <video autoplay muted loop playsinline class="background-video">
+          <source src="./img/hero-video-1.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
         <div class="inner-div container">
+          <div class="content-absolute">
+            <div class="services-hero-menu">
+              <div class="services">
+                <div class="menu" style="min-width: 155px">
+                  <div class="button style-29">
+                    <a class="link">Interior Design</a>
+                  </div>
+                </div>
+                <div class="menu" style="min-width: 170px">
+                  <div class="button style-29">
+                    <a class="link">Furniture Design</a>
+                  </div>
+                </div>
+                <div class="menu" style="min-width: 200px">
+                  <div class="button style-29">
+                    <a class="link">Architectural Design</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-content">
+              <h1 class="hero-title">
+                <span id="title">
+                  <span class="title-letter">I</span>
+                  <span class="title-letter">N</span>
+                  <span class="title-letter">T</span>
+                  <span class="title-letter">E</span>
+                  <span class="title-letter">R</span>
+                  <span class="title-letter">I</span>
+                  <span class="title-letter">O</span>
+                  <span class="title-letter">R</span>
+                  <span class="title-letter">&nbsp;</span>
+                  <span class="title-letter">D</span>
+                  <span class="title-letter">E</span>
+                  <span class="title-letter">S</span>
+                  <span class="title-letter">I</span>
+                  <span class="title-letter">G</span>
+                  <span class="title-letter">N</span>
+                </span>
+                <br />
+              </h1>
+              <div class="animation-section style-5">
+                <div class="reveal-wrapper">
+                  <h1 class="hero-para">
+                    <span class="line"
+                      ><span class="line-inner"
+                        >Interior, Furniture and architectural design rooted in
+                        function,</span
+                      ></span
+                    >
+                    <span class="line"
+                      ><span class="line-inner"
+                        >soul, and intention.</span
+                      ></span
+                    >
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="welcome-text">
+        <div class="inner-div container">
+          <h2 class="reveal-type" data-bg-color="#cccccc" data-fg-color="teal">
+            We Design custom, architect-grade spaces
+            <span>and built them in weeks, not years.</span>
+          </h2>
+        </div>
+      </section>
+
+      <!-- Animation Script -->
+      <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const splitTypes = document.querySelectorAll(".reveal-type");
+
+        splitTypes.forEach((char, i) => {
+          const bg = char.dataset.bgColor;
+          const fg = char.dataset.fgColor;
+
+          const text = new SplitType(char, { types: "chars" });
+
+          gsap.fromTo(
+            text.chars,
+            {
+              color: bg,
+            },
+            {
+              color: fg,
+              duration: 0.3,
+              stagger: 0.02,
+              scrollTrigger: {
+                trigger: char,
+                start: "top 80%",
+                end: "top 20%",
+                scrub: true,
+                markers: false,
+                toggleActions: "play play reverse reverse",
+              },
+            }
+          );
+        });
+
+        const lenis = new Lenis();
+
+        lenis.on("scroll", (e) => {
+          console.log(e);
+        });
+
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+      </script>
+      <div class="featured-project-wrapper">
+        <div class="inner-div container">
+          <div class="leftmost">
+            <h2>Featured</h2>
+          </div>
+          <div class="rightmost">
+            <div class="left">
+              <img
+                src="./img/feat-prod-one-slide.webp"
+                alt="Well Then So Interior Design Goa Porvorim"
+              />
+              <h3 class="project-title">Te Fitti Cafe</h3>
+            </div>
+            <div class="right">
+              <div class="top">
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </p>
+              </div>
+              <div class="bottom">
+                <img
+                  src="./img/feat-prod-two.jpg"
+                  alt="Well Then So Interior Design Goa Porvorim"
+                />
+                <div>
+                  <h3 class="project-overview">Project Overview</h3>
+                  <p>Interior Design</p>
+                  <p>Interior Design</p>
+                  <p>Interior Design</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inner-div container">
+          <div class="leftmost">
+            <h2>Featured</h2>
+          </div>
+          <div class="rightmost">
+            <div class="left">
+              <img
+                src="./img/feat-prod-one-slide.webp"
+                alt="Well Then So Interior Design Goa Porvorim"
+              />
+              <h3 class="project-title">Te Fitti Cafe</h3>
+            </div>
+            <div class="right">
+              <div class="top">
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </p>
+              </div>
+              <div class="bottom">
+                <img
+                  src="./img/feat-prod-two.jpg"
+                  alt="Well Then So Interior Design Goa Porvorim"
+                />
+                <div>
+                  <h3 class="project-overview">Project Overview</h3>
+                  <p>Interior Design</p>
+                  <p>Interior Design</p>
+                  <p>Interior Design</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inner-div container">
+          <div class="leftmost">
+            <h2>Featured</h2>
+          </div>
+          <div class="rightmost">
+            <div class="left">
+              <img
+                src="./img/feat-prod-one-slide.webp"
+                alt="Well Then So Interior Design Goa Porvorim"
+              />
+              <h3 class="project-title">Te Fitti Cafe</h3>
+            </div>
+            <div class="right">
+              <div class="top">
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </p>
+              </div>
+              <div class="bottom">
+                <img
+                  src="./img/feat-prod-two.jpg"
+                  alt="Well Then So Interior Design Goa Porvorim"
+                />
+                <div>
+                  <h3 class="project-overview">Project Overview</h3>
+                  <p>Interior Design</p>
+                  <p>Interior Design</p>
+                  <p>Interior Design</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="meet-team-wrapper">
+        <div class="inner-div container">
+          <div class="left">
             <div class="top">
-                <div class="left">
-                    <img src="./img/footer-logo-wts.png" alt="Well Then Studio Interior Designing Porvorim Goa"
-                        width="200" height="">
-                    <div class="address">
-                        <p>Well Then So Interior & Furniture Design Studio</p>
-                        <p>Sujata Enclave, Behind Galaxy Residency, Porvorim, Penha de Franca, Goa, 403501</p>
-                    </div>
-                    <div class="policy-options">
-                        <a href="">T&C <span><img src=""
-                                    alt="Well Then Studio Interior Designing Porvorim Goa"></span></a>
-                        <a href="">Privacy Policy <span><img src=""
-                                    alt="Well Then Studio Interior Designing Porvorim Goa"></span></a>
-                        <a href="">Returns & Shipping <span><img src=""
-                                    alt="Well Then Studio Interior Designing Porvorim Goa"></span></a>
-                    </div>
-                    <div class="middle">
-                        <div class="newletter">
-                            <p>Our Newsletter</p>
-                            <div class="form"></div>
-                            <p>By signing up you are agreeing to our <a href="">Privacy Policy</a></p>
-                        </div>
-                        <div class="address-contact">
-                            <p>hello@wellthenso.com<br>+91-986340274</p>
-                        </div>
-                        <div class="badges">
-                            <p>BADGES</p>
-                            <div class="img">
-                                <img width="100" height="100" src="./img/badge.png"
-                                    alt="Well Then Studio Interior Designing Porvorim Goa">
-                                <img width="" height="100" src="./img/badge-2.png"
-                                    alt="Well Then Studio Interior Designing Porvorim Goa">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="right">
-                    <img src="./img/wts-sec-logo.png" alt="Well Then Studio Interior Designing Porvorim Goa" width="150"
-                        height="150">
-                    <div class="social-media">
-                        <a href=""><img width="20" height="20" src="./img/houzz-icon.svg"
-                                alt="Well Then Studio Interior Designing Porvorim Goa"></a>
-                        <a href=""><img width="20" height="20" src="./img/instagram-icon.svg"
-                                alt="Well Then Studio Interior Designing Porvorim Goa"></a>
-                        <a href=""><img width="20" height="20" src="./img/fb-icon.svg"
-                                alt="Well Then Studio Interior Designing Porvorim Goa"></a>
-                        <a href=""><img width="20" height="20" src="./img/pinterest-icon.svg"
-                                alt="Well Then Studio Interior Designing Porvorim Goa"></a>
-                        <a href=""><img width="20" height="20" src="./img/twitter-icon.svg"
-                                alt="Well Then Studio Interior Designing Porvorim Goa"></a>
-                        <a href=""><img width="20" height="20" src="./img/linkedin-icon.svg"
-                                alt="Well Then Studio Interior Designing Porvorim Goa"></a>
-                    </div>
-                </div>
+              <p class="first">Meet The Team</p>
+              <p class="second">Energy and Experience of 30+ Professionals</p>
             </div>
             <div class="bottom">
-                <p>&copy; Well Then So 2025, All Rights Reserved</p>
-                <a href="https://droolmonkey.com">Developed by <span>Drool Monkey Goa</span></a>
+              <p>
+                WellThenSo (Interior Design) and HÀZO (Furniture Design) are Goa
+                based design studios that believes in transforming any space
+                into an aesthetically functional experience zone. An Initiative
+                by Jannat Chopra
+              </p>
+              <p>
+                providing InteriorDesign, FurnitureDesign , Architectural design
+                and execution services for residential, commercial and
+                hospitality ventures. Our teams' approach always remains in the
+                best interest of the user, our vision is to make impactful
+                designs in a responsible budget.
+              </p>
             </div>
+            <div class="know-more-btn">
+              <a href="#">
+                <button class="custom-btn">KNOW MORE</button>
+              </a>
+            </div>
+          </div>
+          <div class="right">
+            <img
+              src="./img/teams.webp"
+              width="525"
+              alt="Well Then Studio Interior Designing Porvorim Goa"
+              width="524"
+              height="386"
+            />
+          </div>
         </div>
+      </div>
+      <div class="visit-us-wrapper">
+        <div class="inner-div container">
+          <div class="top">
+            <div class="left">
+              <h3>Visit Us</h3>
+            </div>
+            <div class="right">
+              <div class="right-top">
+                <p>
+                  Since our founding in 2019, our catalog has grown to with
+                  providing InteriorDesign, FurnitureDesign , Architectural
+                  design  and execution services for residential, commercial and
+                  hospitality ventures.
+                </p>
+              </div>
+              <div class="right-bottom">
+                <div class="bottom-left">
+                  <img
+                    src="./img/visit-left.webp"
+                    alt="Well Then Studio Interior Designing Porvorim Goa"
+                    height="540"
+                  />
+                  <div class="visit-address">
+                    <p>Well Then So Interior & Furniture Design Studio</p>
+                    <p>
+                      Sujata Enclave, Behind Galaxy Residency, Porvorim, Penha
+                      de Franca, Goa, 403501
+                    </p>
+                    <a href="" class="style-4-black">
+                      <span>Get Direction</span>
+                      <svg viewBox="0 0 13 20">
+                        <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="bottom-right">
+                  <img
+                    src="./img/visit-right.webp"
+                    alt="Well Then Studio Interior Designing Porvorim Goa"
+                    height="840"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="inner-div container">
+        <div class="top">
+          <div class="left">
+            <img
+              src="./img/footer-logo-wts.png"
+              alt="Well Then Studio Interior Designing Porvorim Goa"
+              width="200"
+              height=""
+            />
+            <div class="address">
+              <p>Well Then So Interior & Furniture Design Studio</p>
+              <p>
+                Sujata Enclave, Behind Galaxy Residency, Porvorim, Penha de
+                Franca, Goa, 403501
+              </p>
+            </div>
+            <div class="policy-options">
+              <a href=""
+                >T&C
+                <span
+                  ><img
+                    src=""
+                    alt="Well Then Studio Interior Designing Porvorim Goa" /></span
+              ></a>
+              <a href=""
+                >Privacy Policy
+                <span
+                  ><img
+                    src=""
+                    alt="Well Then Studio Interior Designing Porvorim Goa" /></span
+              ></a>
+              <a href=""
+                >Returns & Shipping
+                <span
+                  ><img
+                    src=""
+                    alt="Well Then Studio Interior Designing Porvorim Goa" /></span
+              ></a>
+            </div>
+            <div class="middle">
+              <div class="newletter">
+                <p>Our Newsletter</p>
+                <div class="form"></div>
+                <p>
+                  By signing up you are agreeing to our
+                  <a href="">Privacy Policy</a>
+                </p>
+              </div>
+              <div class="address-contact">
+                <a href="" class="style-4-black">
+                  <span>hello@wellthenso.com</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+                <a href="" class="style-4-black">
+                  <span>+91-986340274</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </div>
+              <div class="badges">
+                <p>BADGES</p>
+                <div class="img">
+                  <img
+                    width="100"
+                    height="100"
+                    src="./img/badge.png"
+                    alt="Well Then Studio Interior Designing Porvorim Goa"
+                  />
+                  <img
+                    width=""
+                    height="100"
+                    src="./img/badge-2.png"
+                    alt="Well Then Studio Interior Designing Porvorim Goa"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <img
+              src="./img/wts-sec-logo.png"
+              alt="Well Then Studio Interior Designing Porvorim Goa"
+              width="150"
+              height="150"
+            />
+            <div class="social-media">
+              <a href=""
+                ><img
+                  width="20"
+                  height="20"
+                  src="./img/houzz-icon.svg"
+                  alt="Well Then Studio Interior Designing Porvorim Goa"
+              /></a>
+              <a href=""
+                ><img
+                  width="20"
+                  height="20"
+                  src="./img/instagram-icon.svg"
+                  alt="Well Then Studio Interior Designing Porvorim Goa"
+              /></a>
+              <a href=""
+                ><img
+                  width="20"
+                  height="20"
+                  src="./img/fb-icon.svg"
+                  alt="Well Then Studio Interior Designing Porvorim Goa"
+              /></a>
+              <a href=""
+                ><img
+                  width="20"
+                  height="20"
+                  src="./img/pinterest-icon.svg"
+                  alt="Well Then Studio Interior Designing Porvorim Goa"
+              /></a>
+              <a href=""
+                ><img
+                  width="20"
+                  height="20"
+                  src="./img/twitter-icon.svg"
+                  alt="Well Then Studio Interior Designing Porvorim Goa"
+              /></a>
+              <a href=""
+                ><img
+                  width="20"
+                  height="20"
+                  src="./img/linkedin-icon.svg"
+                  alt="Well Then Studio Interior Designing Porvorim Goa"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <p>&copy; Well Then So 2025, All Rights Reserved</p>
+          <a href="https://droolmonkey.com"
+            >Developed by <span>Drool Monkey Goa</span></a
+          >
+        </div>
+      </div>
     </footer>
-</body>
 
+    <div class="custom-cursor">
+      <div class="cursor-ball cursor-ball--outer">
+        <svg width="40" height="40">
+          <circle
+            cx="20"
+            cy="20"
+            r="19"
+            stroke-width="1"
+            stroke="grey"
+            fill="none"
+          />
+        </svg>
+      </div>
+      <div class="cursor-ball cursor-ball--inner">
+        <svg width="10" height="10">
+          <circle cx="5" cy="5" r="5" fill="grey" />
+        </svg>
+        <!-- <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="grey" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd"/>
+</svg> -->
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+      const bigBall = document.querySelector(".cursor-ball--outer");
+      const bigBallCircle = bigBall.querySelector("circle");
+      const smallBall = document.querySelector(".cursor-ball--inner");
+      const smallBallCircle = smallBall.querySelector("circle");
+      const hoverables = document.querySelectorAll("p, h1, h2, h3, a, h4, img");
+
+      document.body.addEventListener("mousemove", (e) => {
+        gsap.to(smallBall, {
+          x: e.clientX,
+          y: e.clientY,
+          duration: 0.1,
+          ease: "power2.out",
+        });
+
+        gsap.to(bigBall, {
+          x: e.clientX,
+          y: e.clientY,
+          duration: 1.5,
+          ease: "power3.out",
+        });
+      });
+
+      hoverables.forEach((el) => {
+        el.addEventListener("mouseenter", () => {
+          gsap.to(bigBall, { scale: 2, duration: 1.5 });
+          gsap.to(bigBallCircle, { stroke: "#bfd455", fill: "#bfd45550" });
+          gsap.to(smallBallCircle, { fill: "#bfd455" });
+        });
+        el.addEventListener("mouseleave", () => {
+          gsap.to(bigBall, { scale: 1, duration: 1.5 });
+          gsap.to(bigBallCircle, { stroke: "grey", fill: "none" });
+          gsap.to(smallBallCircle, { fill: "grey" });
+        });
+      });
+    </script>
+  </body>
 </html>
